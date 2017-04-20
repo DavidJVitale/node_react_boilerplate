@@ -1,5 +1,5 @@
 {
-  "name": "node_react_boilerplate",
+  "name": "boilerplate_frontend",
   "version": "1.0.0",
   "description": "Personal boilerplate setup, React with Typescript and webpack frontend",
   "main": "index.tsx",
