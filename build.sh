@@ -3,11 +3,12 @@
 #Compile backend and front end, displays in firefox
 #Prompts user to recompile either codebase
 
+cd frontend
 npm install
-
 webpack
+cd ..
 
-firefox ./index.html
+firefox ./frontend/index.html > /dev/null
 
 while true; do
     #Clear screen
@@ -17,7 +18,9 @@ while true; do
     #clear screen
     printf "\033c"
     case "$option" in
-        f) webpack
+        f) cd frontend
+           webpack
+           cd ..
            ;;
         b) echo "Not implemented yet..."
            ;;

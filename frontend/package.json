@@ -1,7 +1,7 @@
 {
   "name": "node_react_boilerplate",
   "version": "1.0.0",
-  "description": "Personal boilerplate setup using Node and React with Typescript and webpack",
+  "description": "Personal boilerplate setup, React with Typescript and webpack frontend",
   "main": "index.tsx",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,8 +18,5 @@
     "awesome-typescript-loader": "^3.1.2",
     "source-map-loader": "^0.2.1",
     "typescript": "^2.2.2"
-  },
-  "scripts" : {
-    "start" : "./build.sh"
   }
 }
