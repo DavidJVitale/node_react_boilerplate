@@ -12,7 +12,7 @@ firefox ./frontend/index.html > /dev/null
 
 while true; do
     #Clear screen
-    echo -e "\n-----\nSee above for compilation details. Refresh webpage to view.\n'f' to recompile front end, 'b' to recompile back end, 'e' to exit."
+    echo -e "\n-----\nSee above for compilation details. Refresh webpage to view.\n'f' to recompile front end, 'b' to recompile back end, 'e' to exit.\n-----"
     #read in one character
     read -n 1 option
     #clear screen
@@ -22,7 +22,10 @@ while true; do
            webpack
            cd ..
            ;;
-        b) echo "Not implemented yet..."
+        b) cd backend
+           tsc
+           node build/*.js &
+           cd ..
            ;;
         e) exit
            ;;
