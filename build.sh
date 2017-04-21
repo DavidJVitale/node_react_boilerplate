@@ -8,11 +8,19 @@ npm install
 webpack
 cd ..
 
-firefox ./frontend/index.html > /dev/null
+cd backend
+tsc
+node --use_strict build/*.js &
+cd ..
+
+firefox http://localhost:3000 > /dev/null &
 
 while true; do
-    #Clear screen
-    echo -e "\n-----\nSee above for compilation details. Refresh webpage to view.\n'f' to recompile front end, 'b' to recompile back end, 'e' to exit.\n-----"
+    echo -e "\n-----\nSee above for compilation details, below for runtime."
+    echo -e "Refresh webpage to view most up-to-date.\n-----"
+    echo -e "'f' to recompile front end,"
+    echo -e "'b' to recompile back end,"
+    echo -e "'e' to exit.\n-----"
     #read in one character
     read -n 1 option
     #clear screen
@@ -23,8 +31,9 @@ while true; do
            cd ..
            ;;
         b) cd backend
+           killall node
            tsc
-           node build/*.js &
+           node --use_strict build/*.js &
            cd ..
            ;;
         e) exit
