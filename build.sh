@@ -54,7 +54,8 @@ kill_back_end
 compile_front_end
 compile_back_end
 run_back_end
-firefox http://localhost:3000 > /dev/null &
+#open a firefox window
+sleep 1 && firefox http://localhost:3000 > /dev/null &
 
 while true; do
     print_options_text

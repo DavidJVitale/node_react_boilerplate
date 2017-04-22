@@ -11,11 +11,15 @@
   "dependencies": {
     "@types/react": "^15.0.22",
     "@types/react-dom": "^15.5.0",
+    "css-loader": "^0.28.0",
+    "less": "^2.7.2",
+    "less-loader": "^4.0.3",
     "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "react-dom": "^15.5.4",
+    "style-loader": "^0.16.1"
   },
   "devDependencies": {
-    "awesome-typescript-loader": "^3.1.2",
+    "ts-loader": "^2.0.3",
     "source-map-loader": "^0.2.1",
     "typescript": "^2.2.2"
   }
