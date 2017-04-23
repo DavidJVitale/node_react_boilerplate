@@ -3,31 +3,34 @@
 #Compile backend and front end, displays in firefox
 #Prompts user to recompile either codebase
 
+dir_of_script="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
 #runs npm install on backend and frontend
 run_npm_install(){
+    cd $dir_of_script
     cd frontend
     npm install
     cd ../backend
     npm install
-    cd ..
 }
 
 # use webpack for front end compilation
 compile_front_end(){
+    cd $dir_of_script
     cd frontend
     webpack
-    cd ..
 }
 
 # use tsc for back end compilation
 compile_back_end(){
+    cd $dir_of_script
     cd backend
     tsc
-    cd ..
 }
 
 # use node on backend built application
 run_back_end(){
+    cd $dir_of_script
     node --use_strict ./backend/build/*.js &
 }
 
@@ -72,6 +75,7 @@ while true; do
            cd ..
            ;;
         e) kill_back_end
+           echo "Node backend webserver killed. Goodbye!"
            exit
            ;;
     esac
