@@ -12,7 +12,8 @@ This is a personal project boilerplate. Here is the structure breakdown
     - Outputted bundle.js will be put in dist (index.html in ./public)
 
 ./public
-    - Anything put in this folder will be publicly visible at /js/
+    - Anything put in this folder will be publicly visible at /js/ on the 
+      final hosted web server
 
 ./README.md
     - This file
