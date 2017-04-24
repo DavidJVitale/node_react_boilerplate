@@ -10,9 +10,12 @@ app.use('/js', express.static(path.join(__dirname, "../../frontend/dist")))
 
 app.use('/public', express.static(path.join(__dirname, "../../public")))
 
-import { IndexController } from './controllers/index_controller'
+import * as allControllersDirectory from './controllers'
 
-new IndexController(app)
+for (var controllerFileKey in allControllersDirectory){
+  var individualController = allControllersDirectory[controllerFileKey]
+  new individualController(app)
+}
 
 var server = http.createServer(app)
 
