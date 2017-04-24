@@ -1,7 +1,7 @@
 #!/bin/bash
-#What is run when "npm start" is run
-#Compile backend and front end, displays in firefox
-#Prompts user to recompile either codebase
+# David Vitale, node_react_build_script
+# Compile backend and front end, displays in firefox
+# Prompts user to recompile either codebase
 
 dir_of_script="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
@@ -28,10 +28,10 @@ compile_back_end(){
     tsc
 }
 
-# use node on backend built application
+# use node on backend to host web server
 run_back_end(){
     cd $dir_of_script
-    node --use_strict ./backend/build/*.js &
+    node ./backend/build/*.js &
 }
 
 # kills the node application
