@@ -2,22 +2,28 @@ import * as express from 'express'
 import * as path from 'path'
 import * as http from 'http'
 
-var app = express()
+import * as allRoutesDirectory from './routes'
 
-app.set('port', process.env.PORT || 3000)
+function main(){
+    var app = express()
 
-app.use('/js', express.static(path.join(__dirname, "../../frontend/dist")))
+    app.set('port', process.env.PORT || 3000)
 
-app.use('/public', express.static(path.join(__dirname, "../../public")))
+    setUpStaticFiles(app)
+    setUpRoutes(app)
 
-import * as allControllersDirectory from './controllers'
+    var server = http.createServer(app)
 
-for (var controllerFileKey in allControllersDirectory){
-  var individualController = allControllersDirectory[controllerFileKey]
-  new individualController(app)
-}
+    server.listen(app.get('port'), () => {
+        console.log("App listening on port 3000!")})}
 
-var server = http.createServer(app)
+function setUpStaticFiles(app){
+    app.use('/js', express.static(path.join(__dirname, "../../frontend/dist")))
+    app.use('/public', express.static(path.join(__dirname, "../../public")))}
 
-server.listen(app.get('port'), () => {
-    console.log("App listening on port 3000!")})
+function setUpRoutes(app){
+    for (var routeFileKey in allRoutesDirectory){
+        var individualRoute = allRoutesDirectory[routeFileKey]
+        new individualRoute(app)}}
+
+main()
