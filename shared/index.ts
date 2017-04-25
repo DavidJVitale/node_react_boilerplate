@@ -1,0 +1,1 @@
+export { IceCream } from './IceCream'

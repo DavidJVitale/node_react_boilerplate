@@ -4,10 +4,11 @@
   "description": "Personal boilerplate setup, React with Typescript and webpack frontend",
   "main": "index.tsx",
   "scripts": {
+    "postinstall": "npm link shared",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "David Vitale",
-  "license": "GPL-2.0",
+  "license": "MIT",
   "dependencies": {
     "@types/react": "^15.0.22",
     "@types/react-dom": "^15.5.0",

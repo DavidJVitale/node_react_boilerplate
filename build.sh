@@ -8,8 +8,13 @@ dir_of_script="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 #runs npm install on backend and frontend
 run_npm_install(){
     cd $dir_of_script
-    cd frontend
+
+    cd shared
     npm install
+
+    cd ../frontend
+    npm install
+
     cd ../backend
     npm install
 }
