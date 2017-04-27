@@ -5,18 +5,17 @@
 
 import { IceCream, IceCreamInterface } from '../node_modules/shared'
 
-let inMemoryList : IceCreamInterface[] = [
+var inMemoryList : IceCreamInterface[] = [
     new IceCream("Vanilla", true, true),
     new IceCream("Rocky Road", false, true),
     new IceCream("Brussel Sprout Cream", true, false)
     ]
 
-export function getMockIceCream(): IceCreamInterface[]{
+export function getIceCreams(): IceCreamInterface[]{
     return inMemoryList
 }
 
-export function setMockIceCream(IceCreams : IceCreamInterface[]){
-    for(let iceCream of IceCreams){
+export function pushIceCreams(IceCreams : IceCreamInterface[]){
+    for(let iceCream of IceCreams)
         inMemoryList.push(iceCream)
-    }
 }
