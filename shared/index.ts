@@ -1,1 +1,1 @@
-export { IceCream } from './IceCream'
+export { IceCream, IceCreamInterface } from './IceCream'

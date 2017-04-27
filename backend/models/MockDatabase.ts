@@ -3,14 +3,20 @@
  * with calls to a MySQL, Mongo, or whatever else Db you want.
  */
 
-import { IceCream } from '../node_modules/shared'
+import { IceCream, IceCreamInterface } from '../node_modules/shared'
 
-let inMemoryList : IceCream[] = [
-  new IceCream("Vanilla", true, true),
-  new IceCream("Rocky Road", false, true),
-  new IceCream("Brussel Sprout Cream", true, false)
-]
+let inMemoryList : IceCreamInterface[] = [
+    new IceCream("Vanilla", true, true),
+    new IceCream("Rocky Road", false, true),
+    new IceCream("Brussel Sprout Cream", true, false)
+    ]
 
-export function getMockIceCream(): IceCream[]{
-  return inMemoryList
+export function getMockIceCream(): IceCreamInterface[]{
+    return inMemoryList
+}
+
+export function setMockIceCream(IceCreams : IceCreamInterface[]){
+    for(let iceCream of IceCreams){
+        inMemoryList.push(iceCream)
+    }
 }

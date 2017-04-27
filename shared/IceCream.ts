@@ -1,4 +1,10 @@
-export class IceCream {
+export interface IceCreamInterface {
+    name: string,
+    isGlutenFree : boolean,
+    isTasty: boolean
+}
+
+export class IceCream implements IceCreamInterface {
     name : string
     isGlutenFree : boolean
     isTasty : boolean

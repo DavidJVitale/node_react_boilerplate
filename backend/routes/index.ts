@@ -4,3 +4,4 @@
 
 export { HomeRoute } from './HomeRoute'
 export { IceCreamGetRoute } from './IceCreamGetRoute'
+export { IceCreamPostRoute } from './IceCreamPostRoute'
