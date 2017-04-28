@@ -14,10 +14,10 @@ export class IceCreamGet extends React.Component<undefined, IceCreamGetProps> {
     }
 
     handleClick = function() : void {
-        //this.setState(prevState => ({
-           // prevState}}
-        console.log("Hello Button!")
-    }
+        this.setState(function(prevState : IceCreamGetProps) {
+          prevState.IceCreams.push(new IceCream("Mint", false, true))
+          return prevState})
+    }  
 
     render() {
         return (
