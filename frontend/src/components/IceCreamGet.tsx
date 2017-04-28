@@ -10,9 +10,19 @@ export class IceCreamGet extends React.Component<undefined, IceCreamGetProps> {
     constructor(props : any){
         super(props)
         this.state = {IceCreams : [ new IceCream("Chocolate Chip", false, true)]}
+        this.handleClick = this.handleClick.bind(this)
+    }
+
+    handleClick = function() : void {
+        //this.setState(prevState => ({
+           // prevState}}
+        console.log("Hello Button!")
     }
 
     render() {
-        return <h1>Hello Ice Cream! {JSON.stringify(this.state.IceCreams)} </h1>
-    }
-}
+        return (
+            <div className="IceCreamDisplay">
+            <button onClick={this.handleClick}>{"Get From Server"}</button>
+            Delicious Ice Cream {JSON.stringify(this.state.IceCreams)}
+            </div>
+        );}}
