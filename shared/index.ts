@@ -1,1 +1,1 @@
-export { IceCream, IceCreamInterface } from './IceCream'
+export { IceCream, IceCreamInterface, IceCreamParameters } from './IceCream'

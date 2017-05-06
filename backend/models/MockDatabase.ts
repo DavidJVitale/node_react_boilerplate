@@ -6,16 +6,19 @@
 import { IceCream, IceCreamInterface } from '../node_modules/shared'
 
 var inMemoryList : IceCreamInterface[] = [
-    new IceCream("Vanilla", true, true),
-    new IceCream("Rocky Road", false, true),
-    new IceCream("Brussel Sprout Cream", true, false)
-    ]
+  new IceCream({Name: "Vanilla", 
+                IsGlutenFree: true,
+                IsTasty: true}),
+  new IceCream({Name: "Rocky Road",
+                IsGlutenFree: false,
+                IsTasty: true}),
+  new IceCream({Name: "Brussel Sprout Cream",
+                IsGlutenFree: true,
+                IsTasty: false})]
 
 export function getIceCreams(): IceCreamInterface[]{
-    return inMemoryList
-}
+    return inMemoryList}
 
 export function pushIceCreams(IceCreams : IceCreamInterface[]){
     for(let iceCream of IceCreams)
-        inMemoryList.push(iceCream)
-}
+        inMemoryList.push(iceCream)}
