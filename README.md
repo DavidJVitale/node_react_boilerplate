@@ -1,35 +1,27 @@
-This is a personal project boilerplate. Here is the structure breakdown
+#Node/React with Typescript Boilerplate
 
-./backend
-    - The Node/Express web server, compiled using tsc Typescript 2.X
-    - Outputted main-server.js should be in build
+This dynamic content webpage boilerplate uses Typescript on both the Node.js backend and React.js frontent.  This allows for a 1 language project with strong typing. Other technologies used are Less and webpack.
 
-./build.sh
-    - The bash script used to recompile frontend and backend during development
+![](http://i983.photobucket.com/albums/ae313/DavidJosephVitale/NodeReactBasic_zpsduzhfkks.gif) 
 
-./frontend
-    - Contains webpack-compiled React using Typescript and Less
-    - Outputted bundle.js will be put in dist (index.html in ./public)
+##Project Structure Breakdown
+* ./backend
+    * The Node/Express web server, compiled using tsc Typescript 2.X
+    * Outputted main-server.js will be in ./backend/build
 
-./public
-    - Anything put in this folder will be publicly visible at /js/ on the 
-      final hosted web server
+* ./build.sh
+    * The bash script used to recompile frontend and backend during development
 
-./README.md
-    - This file
+* ./frontend
+    * Contains webpack-compiled React using Typescript and Less
+    * Outputted bundle.js will be in ./frontend/dist/
 
-./shared
-    - What will eventually contain shared code modules between
-      the backend and the frontend
+* ./public
+    * Contains the actual HTML page that references the bundled React.js file in ./frontend/dist/
+    * Anything put in this folder will be publicly visible at /js/ on the final hosted web server
 
------
+* ./README.md
+    * This file
 
-This project was created for the following purposes:
-
-1) Create a barebones boilerplate for a Node/React web application
-2) Understand all the configurations that go into the average boilerplate
-3) Understand webpack bundling
-4) Understand Typescript transpiling
-5) Create a basis for an eventual portfolio website
-
-Feel free to use this project for any purpose you see fit.
+* ./shared
+    * Shared typescript files between the backend and frontend. In this example, the IceCream type used by both.

@@ -1,6 +1,6 @@
 import * as React from "react"
-import { IceCream, IceCreamInterface } from "../../node_modules/shared"
-import "../styles/Hello.less"
+import { IceCreamInterface } from "../../node_modules/shared"
+//import "../styles/ICGet.less"
 import 'whatwg-fetch'
 
 export interface IceCreamGetProps { IceCreams : IceCreamInterface[] }
@@ -12,7 +12,7 @@ export class IceCreamGet extends React.Component<undefined, IceCreamGetProps>{
         this.handleClick = this.handleClick.bind(this)}
 
     handleClick() {
-        fetch("http://localhost:3000/api/IceCream").then((response) => {
+        fetch("/api/IceCreams/").then((response) => {
             response.json().then((data : any) => {
                 this.setState({IceCreams : this.jsonToIceCreams(data)})})})}
 

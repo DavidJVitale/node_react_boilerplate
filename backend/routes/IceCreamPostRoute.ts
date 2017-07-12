@@ -3,4 +3,6 @@ import * as bodyParser from 'body-parser'
 
 export class IceCreamPostRoute {
     constructor(app){
-        app.post('/api/IceCream', bodyParser.text(), IceCreamPostController)}}
+        app.post('/api/IceCreams/',
+                 bodyParser.text(),
+                 IceCreamPostController)}}

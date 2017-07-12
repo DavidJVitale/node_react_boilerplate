@@ -1,6 +1,6 @@
 import * as React from "react"
 import { IceCream, IceCreamInterface } from "../../node_modules/shared"
-import "../styles/Hello.less"
+//import "../styles/ICPost.less"
 import 'whatwg-fetch'
 
 export interface ICPostProps { InputName: string,
@@ -17,7 +17,7 @@ export class IceCreamPost extends React.Component<undefined, ICPostProps>{
         this.handleNameChange = this.handleNameChange.bind(this)}
 
     handleClick() {
-        fetch("http://localhost:3000/api/IceCream",
+        fetch("/api/IceCreams/",
             {method: "POST",
             body: JSON.stringify(new Array<IceCreamInterface>(
                 new IceCream({ Name: this.state.InputName,
