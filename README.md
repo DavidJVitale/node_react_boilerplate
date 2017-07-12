@@ -1,10 +1,10 @@
-#Node/React with Typescript Boilerplate
+# Node/React with Typescript Boilerplate
 
 This dynamic content webpage boilerplate uses Typescript on both the Node.js backend and React.js frontent.  This allows for a 1 language project with strong typing. Other technologies used are Less and webpack.
 
 ![](http://i983.photobucket.com/albums/ae313/DavidJosephVitale/NodeReactBasic_zpsduzhfkks.gif) 
 
-##Project Structure Breakdown
+## Project Structure Breakdown
 * ./backend
     * The Node/Express web server, compiled using tsc Typescript 2.X
     * Outputted main-server.js will be in ./backend/build
