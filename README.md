@@ -1,8 +1,14 @@
 # Node/React with Typescript Boilerplate
 
-This dynamic content webpage boilerplate uses Typescript on both the Node.js backend and React.js frontent.  This allows for a 1 language project with strong typing. Other technologies used are Less and webpack.
+This dynamic content webpage boilerplate uses Typescript on both the Node.js backend and React.js frontent.  This allows for a 1 language project with strong typing.
 
 ![](http://i983.photobucket.com/albums/ae313/DavidJosephVitale/NodeReactBasic_zpsduzhfkks.gif) 
+
+## About
+
+Using Typescript for both the backend server and frontend display has distinct advantages, mainly being that types can be shared. A strong-typed IceCream object is stored in the backend server, passed to the frontend client, where it still maintains its type information.
+
+Other technologies used include Less and webpack.
 
 ## Project Structure Breakdown
 * ./backend
