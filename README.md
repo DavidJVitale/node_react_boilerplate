@@ -2,7 +2,7 @@
 
 This dynamic content webpage boilerplate uses Typescript on both the Node.js backend and React.js frontent.  This allows for a 1 language project with strong typing.
 
-![](http://i983.photobucket.com/albums/ae313/DavidJosephVitale/NodeReactBasic_zpsduzhfkks.gif) 
+![](http://github.com/DavidJVitale/node_react_boilerplate/tree/master/pics/1.gif|alt=octocat) 
 
 ## About
 
